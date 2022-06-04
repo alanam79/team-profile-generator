@@ -108,16 +108,62 @@ function appMenu() {
         },
       ])
       .then((answers) => {
-        const { engineerrName, engineerrId, engineerrEmail, engineerGithub } =
+        const { engineerName, engineerId, engineerEmail, engineerGithub } =
           answers;
         const engineer = new Engineer(
-          engineerrName,
-          engineerrId,
-          engineerrEmail,
+          engineerName,
+          engineerId,
+          engineerEmail,
           engineerGithub
         );
 
         teamArray.push(engineer);
+        console.log("team!", teamArray);
+        createTeam();
+      });
+  }
+
+  function createIntern() {
+    inquirer
+      .prompt([
+        {
+          type: "input",
+          name: "internName",
+          message: "What is the interns's name?",
+        },
+        {
+          type: "input",
+          name: "internId",
+          message: "What is the intern's id?",
+        },
+        {
+          type: "input",
+          name: "internEmail",
+          message: "What is the inters's email?",
+        },
+        {
+          type: "input",
+          name: "internGithub",
+          message: "What is the interns's github username?",
+        },
+        {
+          type: "input",
+          name: "internSchool",
+          message: "What is the intern's school?"
+        }
+      ])
+      .then((answers) => {
+        const { internName, internId, internEmail, internGithub, internSchool } =
+          answers;
+        const intern = new intern(
+          internName,
+          internId,
+          internEmail,
+          internGithub,
+          internSchool
+        );
+
+        teamArray.push(intern);
         console.log("team!", teamArray);
         createTeam();
       });
@@ -128,6 +174,7 @@ function appMenu() {
       fs.mkdirSync(DIST_DIR);
     }
     fs.writeFileSync(distPath, generatePage(teamArray), "utf-8");
+    console.log('Team Member Report Complete! Check out index.html to see the output!');
   }
 
   createManager();
@@ -135,18 +182,3 @@ function appMenu() {
 
 appMenu();
 
-// const employeeDataArgs = process.argv.slice(2);
-
-// console.log(employeeDataArgs);
-
-// const [name, github] = employeeDataArgs;
-
-// console.log(name, github);
-
-// const pageHTML = generatePage(name, github);
-
-// fs.writeFile('./index.html', pageHTML, err => {
-//   if (err) throw err;
-
-//   console.log('Team Profile Generator complete! Check out index.html to see the output!');
-// });
