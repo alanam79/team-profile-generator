@@ -1,14 +1,12 @@
 const generateTeam = (team) => {
   console.log("team from index.js", team);
+  
 
   // build three bootstrap cards with template literals around them
   // build three functions that take each individual type of employee
 
   const generateManager = (manager) => {
     return `
-    <header><h1>My Team</h1><header>
-
-
         <div>${manager.getName()}</div>
         <div>${manager.getId()}</div>
         <div>${manager.getEmail()}</div>
@@ -69,8 +67,11 @@ module.exports = (team) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>My Team</title>
+      <link rel="stylesheet" href="style.css"></link>
+      <title>Team Profile Generator</title>
     </head>
+
+    <header><h1>My Team</h1><header>
     
     <body>
       ${generateTeam(team)}
