@@ -1,5 +1,3 @@
-
-const { exportAllDeclaration } = require("@babel/types");
 const Employee = require("../lib/Employee");
 
 test("Can instatiate Employee instance", ()=>{

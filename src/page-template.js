@@ -6,11 +6,32 @@ const generateTeam = (team) => {
 
   const generateManager = (manager) => {
     return `
+    <header><h1>My Team</h1><header>
+
+
         <div>${manager.getName()}</div>
         <div>${manager.getId()}</div>
         <div>${manager.getEmail()}</div>
         <div>${manager.getOfficeNumber()}</div>
         <div>${manager.getRole()}</div>
+        `;
+  };
+
+  const generateEngineer = (engineer) => {
+    return `
+        <div>${engineer.getName()}</div>
+        <div>${engineer.getId()}</div>
+        <div>${engineer.getEmail()}</div>
+        <div>${engineer.getRole()}</div>
+        `;
+  };
+
+  const generateIntern = (intern) => {
+    return `
+        <div>${intern.getName()}</div>
+        <div>${intern.getId()}</div>
+        <div>${intern.getEmail()}</div>
+        <div>${intern.getRole()}</div>
         `;
   };
 
@@ -22,9 +43,19 @@ const generateTeam = (team) => {
       .map((manager) => generateManager(manager))
   );
 
-  // html.push(team.filter(employee => employee.getRole() === "Engineer").map(engineer => generateEngineer(engineer)).join(""))
+  html.push(
+    team
+      .filter((employee) => employee.getRole() === "Engineer")
+      .map((engineer) => generateEngineer(engineer))
+      .join("")
+  );
 
-  // html.push(team.filter(employee => employee.getRole() === "Intern").map(intern => generateIntern(intern)).join(""))
+  html.push(
+    team
+      .filter((employee) => employee.getRole() === "Intern")
+      .map((intern) => generateIntern(intern))
+      .join("")
+  );
 
   return html.join("");
 };
@@ -38,7 +69,7 @@ module.exports = (team) => {
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Portfolio Demo</title>
+      <title>My Team</title>
     </head>
     
     <body>

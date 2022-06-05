@@ -4,6 +4,7 @@ const generatePage = require("./src/page-template");
 const inquirer = require("inquirer");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
+const Intern = require("./lib/Intern");
 
 const teamArray = [];
 
@@ -75,7 +76,7 @@ function appMenu() {
             createEngineer();
             break;
           case "Add Intern":
-            // createIntern()
+            createIntern();
             break;
           default:
             buildTeam();
@@ -149,13 +150,18 @@ function appMenu() {
         {
           type: "input",
           name: "internSchool",
-          message: "What is the intern's school?"
-        }
+          message: "What is the intern's school?",
+        },
       ])
       .then((answers) => {
-        const { internName, internId, internEmail, internGithub, internSchool } =
-          answers;
-        const intern = new intern(
+        const {
+          internName,
+          internId,
+          internEmail,
+          internGithub,
+          internSchool,
+        } = answers;
+        const intern = new Intern(
           internName,
           internId,
           internEmail,
@@ -174,11 +180,19 @@ function appMenu() {
       fs.mkdirSync(DIST_DIR);
     }
     fs.writeFileSync(distPath, generatePage(teamArray), "utf-8");
-    console.log('Team Member Report Complete! Check out index.html to see the output!');
+    console.log(
+      "Team Member Report Complete! Check out index.html to see the output!"
+    );
+    fs.copyFile("./src/style.css", "./dist/style.css", (err) => {
+      if (err) {
+        console.log(err);
+        return;
+      }
+      console.log("Style sheet copies successfully!");
+    });
   }
 
   createManager();
 }
 
 appMenu();
-
