@@ -111,14 +111,11 @@ module.exports = (team) => {
     ${generateTeam(team)}
     </div>
     </div>
-    
 
-
-
-      </main>  
+    </main>  
 
       <footer>
-      <p class="bottom-0 start-50 translate-middle-x text-center">Team Profile Generator by Alana McKeel</p>
+      <p class="bottom-0 start-50 text-center">Team Profile Generator by Alana McKeel</p>
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
