@@ -5,10 +5,10 @@
 body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: #ffff;
+  min-height: 100vh;
 }
 
 header {
-  /* background-color: red; */
   text-align: center;
   padding: 20px 35px;
 }
@@ -16,3 +16,4 @@ header {
 h1 {
     font-family: "Permanent Marker";
 }
+

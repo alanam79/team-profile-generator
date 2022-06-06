@@ -6,8 +6,6 @@ const generateTeam = (team) => {
 
   const generateManager = (manager) => {
     return `
-    <div class="container">
-    <div class="m-5 row justify-content-around">
       <div class="col-12 col-md-6 col-xl-3 mb-3">
         <div class="card" style="width: 18rem;">
           <div class="card-body">
@@ -25,8 +23,7 @@ const generateTeam = (team) => {
   }; 
 
   const generateEngineer = (engineer) => {
-    return `
-        
+    return `        
     <div class="col-12 col-md-6 col-xl-3 mb-3">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -44,8 +41,7 @@ const generateTeam = (team) => {
   };
 
   const generateIntern = (intern) => {
-    return `
-        
+    return `        
     <div class="col-12 col-md-6 col-xl-3 mb-3">
       <div class="card" style="width: 18rem;">
         <div class="card-body">
@@ -59,8 +55,6 @@ const generateTeam = (team) => {
         </div>
       </div>
     </div>
-  </div>
-  </div>
         `;
   };
 
@@ -111,15 +105,20 @@ module.exports = (team) => {
     <h1 class="w-100 bg-success p-3 text-center text-light display-4">My Team</h1>
     </header>
     <main>
+
+    <div class="container">
+    <div class="m-5 row justify-content-around" id="worker-container">
+    ${generateTeam(team)}
+    </div>
+    </div>
     
-      ${generateTeam(team)}
 
 
 
       </main>  
 
       <footer>
-      <p class="position-absolute bottom-0 start-50 translate-middle-x text-center">Team Profile Generator by Alana McKeel</p>
+      <p class="bottom-0 start-50 translate-middle-x text-center">Team Profile Generator by Alana McKeel</p>
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"

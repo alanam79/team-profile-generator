@@ -20,6 +20,7 @@
     "jest": "^28.1.0"
   },
   "dependencies": {
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "validator": "^13.7.0"
   }
 }
