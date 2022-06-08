@@ -25,7 +25,6 @@ test("Can instatiate Engineer email from constructor", ()=>{
 })
 
 // test for all methods in class
-// test for all methods in class
 test("Can instatiate Engineer name from getName()", ()=>{
     const name = "Alana"
     const emp = new Engineer(name);
