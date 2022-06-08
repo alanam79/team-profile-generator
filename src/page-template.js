@@ -100,7 +100,7 @@ module.exports = (team) => {
       <title>Team Profile Generator</title>
     </head>
 
-    <body>
+    <body style="background-image:url(/src/pexels-pixabay-163064.jpg)">
     <header>
     <h1 class="w-100 bg-success p-3 text-center text-light display-4">My Team</h1>
     </header>

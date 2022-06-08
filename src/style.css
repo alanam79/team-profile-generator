@@ -6,6 +6,8 @@ body {
   font-family: Helvetica, Arial, sans-serif;
   background-color: #ffff;
   min-height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
 
 header {
@@ -14,6 +16,5 @@ header {
 }
 
 h1 {
-    font-family: "Permanent Marker";
+  font-family: "Permanent Marker";
 }
-
