@@ -52,3 +52,5 @@
   Copyright &copy;2022 by Alana McKeel.
   Licensed under the MIT license.
   
+  ## Special Thanks
+  Photo by Pixabay
