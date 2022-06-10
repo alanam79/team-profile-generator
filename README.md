@@ -20,6 +20,7 @@
 
   ## Installation
   Inquirer package https://www.npmjs.com/package/inquirer
+  Jest package https://www.npmjs.com/package/jest
 
   ## Usage
   NPM Validator https://www.npmjs.com/package/validator
