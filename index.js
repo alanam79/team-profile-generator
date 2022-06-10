@@ -196,7 +196,7 @@ function appMenu() {
         {
           type: "input",
           name: "internName",
-          message: "What is the interns's name?",
+          message: "What is the Interns's name?",
           validate: (internNameInput) => {
             if (internNameInput) {
               return true;
@@ -209,7 +209,7 @@ function appMenu() {
         {
           type: "input",
           name: "internId",
-          message: "What is the intern's id?",
+          message: "What is the Intern's id?",
           validate: (internIdInput) => {
             if (internIdInput) {
               return true;
@@ -222,7 +222,7 @@ function appMenu() {
         {
           type: "input",
           name: "internEmail",
-          message: "What is the inters's email?",
+          message: "What is the Interns's email?",
           validate: (internEmailInput) => {
             if (validator.isEmail(internEmailInput)) {
               return true;
