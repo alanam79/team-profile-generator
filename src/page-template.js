@@ -13,7 +13,7 @@ const generateTeam = (team) => {
             <h5 class="card-header bg-secondary text-light">Role: ${manager.getRole()} <span class="oi oi-person"></span></h5>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">ID: ${manager.getId()}</li>
-              <li class="list-group-item">Email: ${manager.getEmail()}</li>
+              <li class="list-group-item">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></li>
               <li class="list-group-item">Office Number: ${manager.getOfficeNumber()}</li>        
             </ul>
           </div>
@@ -31,8 +31,8 @@ const generateTeam = (team) => {
           <h5 class="card-header bg-secondary text-light">Role: ${engineer.getRole()} <span class="oi oi-pencil"></span></h5>
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engineer.getId()}</li>
-            <li class="list-group-item">Email: ${engineer.getEmail()}</li>        
-            <li class="list-group-item">GitHub: ${engineer.github} at https://github.com/${engineer.github}</li>
+            <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>        
+            <li class="list-group-item">GitHub: ${engineer.github} at <a href="https://github.com/${engineer.github}></a></li>
           </ul>
         </div>
       </div>
