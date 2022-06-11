@@ -32,7 +32,7 @@ const generateTeam = (team) => {
           <ul class="list-group list-group-flush">
             <li class="list-group-item">ID: ${engineer.getId()}</li>
             <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>        
-            <li class="list-group-item">GitHub: ${engineer.github} at <a href="https://github.com/${engineer.github}></a></li>
+            <li class="list-group-item">GitHub: at <a href="https://github.com/${engineer.github}">${engineer.github} </a></li>
           </ul>
         </div>
       </div>
